@@ -1,4 +1,4 @@
-    Dit is een project waarbij wij een programma bouwen voor Steam voor de HU
+    Dit is een project waarbij wij een programma bouwen voor Steam voor de HU moeten maken.
 # V1G-Groep-6
 
 
