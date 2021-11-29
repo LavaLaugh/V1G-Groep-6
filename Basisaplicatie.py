@@ -6,3 +6,4 @@ data = json.load(open_jayson)
 
 for i in data:
     print(i)
+    print('data')
