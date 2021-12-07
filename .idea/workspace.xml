@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7751a06b-7370-4e7e-8d10-e64dcc9a14b5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Basisaplicatie Front-End.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Basisaplicatie.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basisaplicatie_Front-End.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basisaplicatie_Front-End.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +72,7 @@
       <workItem from="1638184061819" duration="73000" />
       <workItem from="1638800846728" duration="3019000" />
       <workItem from="1638864696827" duration="93000" />
+      <workItem from="1638864997008" duration="130000" />
     </task>
     <servers />
   </component>
@@ -88,6 +89,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/V1G_Groep_6$Basisaplicatie.coverage" NAME="Basisaplicatie Coverage Results" MODIFIED="1638184098969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
