@@ -1,4 +1,5 @@
 import json
+import steam
 
 
 def naam_game_1():
