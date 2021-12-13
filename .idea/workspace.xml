@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7751a06b-7370-4e7e-8d10-e64dcc9a14b5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Basisaplicatie_Back_End.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basisaplicatie_Back_End.py" afterDir="false" />
-    </list>
+    <list default="true" id="7751a06b-7370-4e7e-8d10-e64dcc9a14b5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,6 +95,7 @@
       <workItem from="1638864997008" duration="130000" />
       <workItem from="1638865181245" duration="2131000" />
       <workItem from="1639064567514" duration="369000" />
+      <workItem from="1639388738270" duration="180000" />
     </task>
     <servers />
   </component>
@@ -117,8 +115,8 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Basisaplicatie_Front_End_py$Basisaplicatie_Front_End.coverage" NAME="Basisaplicatie_Front_End Coverage Results" MODIFIED="1638867280565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/V1G_Groep_6$Basisaplicatie.coverage" NAME="Basisaplicatie Coverage Results" MODIFIED="1638184098969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Basisaplicatie_Front_End_py$Basisaplicatie_Front_End.coverage" NAME="Basisaplicatie_Front_End Coverage Results" MODIFIED="1638867280565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/GIT$Basisaplicatie.coverage" NAME="Basisaplicatie Coverage Results" MODIFIED="1638803829031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
