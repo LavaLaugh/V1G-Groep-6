@@ -36,19 +36,22 @@ def shellsort():
                     done = 0
                 if done == 1 and i == len(extra_list):
                     return extra_list
-        for i in range(0, len(extra_list)):
+
+        for i in range(0, len(extra_list) - gap):
             temp = extra_list[i][1][1], extra_list[gap + i][1][1]
             if temp[0] > temp[1]:
                 extra_list[i], extra_list[gap + i] = extra_list[gap + i], extra_list[i]
             print(i)
             print(str(gap) + 'gap')
-            if i == len(extra_list) - 1:
+            if i == len(extra_list) - gap - 1:
                 gap /= 2
                 if gap == 2:
                     gap -= 1
+                    break
                 if isinstance(gap, float) == True:
                     gap = int(gap)
                     gap += 1
+
 
     print(extra_list)
 
