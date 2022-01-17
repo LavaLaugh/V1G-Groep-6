@@ -1,6 +1,9 @@
-extra_list = []
-open_jayson = open('steam.json')
-data = json.load(open_jayson)
-for i in data:
-    extra_list.append(list(i.items()))
-print(extra_list[0][1][1])
+input = 'required_age'
+lst = []
+if input == 'required_age':
+    q = 7
+if input == 'price':
+    q = 17
+for ding in range(0, 10):
+    print(q)
+    lst.append(ding[q][1])
