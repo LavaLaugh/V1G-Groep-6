@@ -2,20 +2,27 @@ import json
 
 
 def gemiddelde(input):
-    lst = []
+    lstnaam = []
+    lstelse = []
+    diclist = []
     open_jayson = open('steam.json')
     data = json.load(open_jayson)
+    for i in data:
+        diclist.append(list(i.items()))
+    for i in diclist:
+        lstnaam.append(i[1][1])
     if input == 'required_age':
-        for ding in data:
-            lst.append(ding[7][1])
+        for ding in diclist:
+            lstelse.append(ding[7][1])
     if input == 'price':
-        for ding in data:
-            lst.append(ding[17][1])
+        for ding in diclist:
+            lstelse.append(ding[17][1])
+    diclist = list(zip(lstnaam, lstelse))
 
     t = 0
     w = 0
-    for i in lst:
-        w += i
+    for i in diclist:
+        w += i[1]
         t += 1
     a = w / t
     return a
@@ -23,29 +30,36 @@ def gemiddelde(input):
 
 def bereik(input):
     lst = []
+    diclist = []
     open_jayson = open('steam.json')
     data = json.load(open_jayson)
+    for i in data:
+        diclist.append(list(i.items()))
     if input == 'required_age':
-        for ding in data:
+        for ding in diclist:
             lst.append(ding[7][1])
     if input == 'price':
-        for ding in data:
+        for ding in diclist:
             lst.append(ding[17][1])
     lst.sort()
     bereik = lst[-1] - lst[0]
     return bereik
 
 
-def mediaan(input):
-    lst = []
-    open_jayson = open('steam.json')
-    data = json.load(open_jayson)
-    if input == 'required_age':
-        for ding in data:
-            lst.append(ding[7][1])
-    if input == 'price':
-        for ding in data:
-            lst.append(ding[17][1])
+def mediaan(input, lst):
+    if lst == []:
+        diclist = []
+        open_jayson = open('steam.json')
+        data = json.load(open_jayson)
+        for i in data:
+            diclist.append(list(i.items()))
+        if input == 'required_age':
+            for ding in diclist:
+                lst.append(ding[7][1])
+        if input == 'price':
+            for ding in diclist:
+                lst.append(ding[17][1])
+        lst.sort()
 
     deel = len(lst) / 2
     if deel != int(deel):
@@ -59,35 +73,43 @@ def mediaan(input):
 
 def q1(input):
     lst = []
+    diclist = []
     open_jayson = open('steam.json')
     data = json.load(open_jayson)
+    for i in data:
+        diclist.append(list(i.items()))
     if input == 'required_age':
-        for ding in data:
+        for ding in diclist:
             lst.append(ding[7][1])
     if input == 'price':
-        for ding in data:
+        for ding in diclist:
             lst.append(ding[17][1])
+    lst.sort()
 
     q1lst = []
     t = 0
     while t != int(len(lst) / 2):
         q1lst.append(lst[t])
         t += 1
-    a = mediaan(q1lst)
+    a = mediaan(input, q1lst)
     waarde = float(a)
     return waarde
 
 
 def q3(input):
     lst = []
+    diclist = []
     open_jayson = open('steam.json')
     data = json.load(open_jayson)
+    for i in data:
+        diclist.append(list(i.items()))
     if input == 'required_age':
-        for ding in data:
+        for ding in diclist:
             lst.append(ding[7][1])
     if input == 'price':
-        for ding in data:
+        for ding in diclist:
             lst.append(ding[17][1])
+    lst.sort()
 
     q3lst = []
     b = len(lst) / 2
@@ -98,20 +120,25 @@ def q3(input):
     for i in range(b, len(lst)):
         q3lst.append(lst[i])
     print(q3lst)
-    a = mediaan(q3lst)
+    a = mediaan(input, q3lst)
     waarde = float(a)
     return waarde
 
 
-def variantie(lst):
-    open_jayson = open('steam.json')
-    data = json.load(open_jayson)
-    if input == 'required_age':
-        for ding in data:
-            lst.append(ding[7][1])
-    if input == 'price':
-        for ding in data:
-            lst.append(ding[17][1])
+def variantie(input, lst):
+    if lst == []:
+        diclist = []
+        open_jayson = open('steam.json')
+        data = json.load(open_jayson)
+        for i in data:
+            diclist.append(list(i.items()))
+        if input == 'required_age':
+            for ding in diclist:
+                lst.append(ding[7][1])
+        if input == 'price':
+            for ding in diclist:
+                lst.append(ding[17][1])
+        lst.sort()
 
     x = sum(lst)
     x_ = x / len(lst)
@@ -122,31 +149,40 @@ def variantie(lst):
     return v
 
 
-def standaardafwijking():
+def standaardafwijking(input):
     lst = []
+    diclist = []
     open_jayson = open('steam.json')
     data = json.load(open_jayson)
+    for i in data:
+        diclist.append(list(i.items()))
     if input == 'required_age':
-        for ding in data:
+        for ding in diclist:
             lst.append(ding[7][1])
-        for ding in data:
+    if input == 'price':
+        for ding in diclist:
             lst.append(ding[17][1])
+    lst.sort()
 
-    output = variantie(lst) ** 0.5
+    output = variantie(input, lst) ** 0.5
 
     return output
 
 
-def frequency(lst):
-    lst = []
-    open_jayson = open('steam.json')
-    data = json.load(open_jayson)
-    if input == 'required_age':
-        for ding in data:
-            lst.append(ding[7][1])
-    if input == 'price':
-        for ding in data:
-            lst.append(ding[17][1])
+def frequency(input, lst):
+    if lst == []:
+        diclist = []
+        open_jayson = open('steam.json')
+        data = json.load(open_jayson)
+        for i in data:
+            diclist.append(list(i.items()))
+        if input == 'required_age':
+            for ding in diclist:
+                lst.append(ding[7][1])
+        if input == 'price':
+            for ding in diclist:
+                lst.append(ding[17][1])
+        lst.sort()
 
     fregs = {}
     for i in lst:
@@ -157,18 +193,22 @@ def frequency(lst):
     return fregs
 
 
-def modus():
+def modus(input):
     lst = []
+    diclist = []
     open_jayson = open('steam.json')
     data = json.load(open_jayson)
+    for i in data:
+        diclist.append(list(i.items()))
     if input == 'required_age':
-        for ding in data:
+        for ding in diclist:
             lst.append(ding[7][1])
     if input == 'price':
-        for ding in data:
+        for ding in diclist:
             lst.append(ding[17][1])
+    lst.sort()
 
-    dic = frequency(lst)
+    dic = frequency(input, lst)
     x = dict(sorted(dic.items(), key=lambda x: x[1]))
     modi = []
     t = 0
@@ -194,17 +234,27 @@ def naam_game_1():
     return game_1.get('name')
 
 
-def sorteren_basis(input):
+def sorteren_basis(input, x, y):
+    diclist = []
     open_jayson = open('steam.json')
     data = json.load(open_jayson)
     file = open('Sorted output.txt', 'w')
     sorted_data = sorted(data, key=lambda d: d[input])
+    for i in sorted_data:
+        diclist.append(list(i.items()))
     file.write('')
-    for game in sorted_data:
-        file.write(str(game))
-        file.write('\n')
+    if input == "name":
+        for game in diclist:
+            file.write("Naam: " + str(game[1][1]) + "\n")
+    else:
+        for game in diclist:
+            file.write("Naam: " + str(game[1][1]) + "    |   " + str(y) + ": " + str(game[x][1]) + "\n")
+    file.close()
+    file = open('Sorted output.txt')
+    a = file.read()
     file.close()
     open_jayson.close()
+    return a
 
 
 """def shellsort():

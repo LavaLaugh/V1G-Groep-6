@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/Basisaplicatie_Front_End.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basisaplicatie_Front_End.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sorted output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Testjes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Testjes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/steam.json" beforeDir="false" afterPath="$PROJECT_DIR$/steam.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +36,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager" selected="Python.Testjes">
+  <component name="RunManager" selected="Python.Basisaplicatie_Front_End">
     <configuration name="Basisaplicatie" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="V1G-Groep-6" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -150,8 +149,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Testjes" />
         <item itemvalue="Python.Basisaplicatie_Front_End" />
+        <item itemvalue="Python.Testjes" />
         <item itemvalue="Python.copy" />
         <item itemvalue="Python.Basisaplicatie_Back_End" />
         <item itemvalue="Python.Basisaplicatie" />
@@ -180,6 +179,10 @@
       <workItem from="1642261505372" duration="780000" />
       <workItem from="1642354588704" duration="10432000" />
       <workItem from="1642409223739" duration="744000" />
+      <workItem from="1642413437495" duration="954000" />
+      <workItem from="1642759847599" duration="3029000" />
+      <workItem from="1643136083290" duration="79000" />
+      <workItem from="1643136382952" duration="464000" />
     </task>
     <servers />
   </component>
@@ -199,9 +202,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Basisaplicatie_Back_End_py$Testjes.coverage" NAME="Testjes Coverage Results" MODIFIED="1642409561503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Basisaplicatie_Back_End_py$Basisaplicatie_Front_End.coverage" NAME="Basisaplicatie_Front_End Coverage Results" MODIFIED="1639996980004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Basisaplicatie_Front_End_py$Basisaplicatie_Front_End.coverage" NAME="Basisaplicatie_Front_End Coverage Results" MODIFIED="1642407305880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Basisaplicatie_Back_End_py$Testjes.coverage" NAME="Testjes Coverage Results" MODIFIED="1642762122427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Basisaplicatie_Back_End_py$Basisaplicatie_Front_End.coverage" NAME="Basisaplicatie_Front_End Coverage Results" MODIFIED="1642414055595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Basisaplicatie_Front_End_py$Basisaplicatie_Front_End.coverage" NAME="Basisaplicatie_Front_End Coverage Results" MODIFIED="1643136786265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Basisaplicatie_Back_End_py$Basisaplicatie_Back_End.coverage" NAME="Basisaplicatie_Back_End Coverage Results" MODIFIED="1639849277000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/V1G_Groep_6$Basisaplicatie.coverage" NAME="Basisaplicatie Coverage Results" MODIFIED="1638184098969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/GIT$Basisaplicatie.coverage" NAME="Basisaplicatie Coverage Results" MODIFIED="1638803829031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
