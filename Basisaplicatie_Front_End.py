@@ -1,9 +1,8 @@
 from tkinter import *
 from Basisaplicatie_Back_End import *
-#import RPi.GPIO as GPIO
-#import time
-#GPIO.setmode( GPIO.BCM )
-#GPIO.setwarnings( 0 )
+import RPi.GPIO as GPIO
+GPIO.setmode( GPIO.BCM )
+GPIO.setwarnings( 0 )
 
 
 def game1():
@@ -65,17 +64,31 @@ def sorting(input, x, y):
     button292.destroy()
     sorteren_basis(input, x, y)
     file = open('Sorted output.txt')
-    a = file.readlines()
-    c = ""
-    d = 0
-    for i in a:
-        c += str(i)
-        d += 1
-        if d >= 10:
-            break
-    print(c)
-    label = Label(master=root, text=c + "\nDe rest is te vinden in Sorted output.txt")
-    label.pack()
+    lijnen = file.readlines()
+    text = ""
+    index = 0
+    pagina = 1
+    def page(lijnen, text, index, pagina):
+        for i in lijnen:
+            text += str(i)
+            index += 1
+            if index >= 25 * pagina:
+                return text
+
+
+    switch = 23
+    GPIO.setup(switch, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+    while True:
+        page_out = page(lijnen, text, index, pagina)
+        label = Label(master=root, text=page_out + "\nDruk op de knop voor de volgende pagina")
+        label.pack()
+        text = ""
+        pagina += 1
+        index += 25
+        if (GPIO.input(switch)):
+            label.destroy()
+
+
 
 
 def stat_input():
@@ -149,8 +162,3 @@ root.mainloop()
 
 
 
-"""switch = 23
-GPIO.setup(switch, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-while True:
-   if(GPIO.input(switch)):
-       sorting()"""
