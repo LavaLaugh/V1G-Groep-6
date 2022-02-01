@@ -183,6 +183,8 @@ def frequency(input, lst):
             for ding in diclist:
                 lst.append(ding[17][1])
         lst.sort()
+    file = open('Sorted output.txt', 'w')
+    file.write("")
 
     fregs = {}
     for i in lst:
@@ -190,7 +192,12 @@ def frequency(input, lst):
             fregs[i] += 1
         else:
             fregs[i] = 1
-    return fregs
+    fregstr = ""
+    for i in fregs:
+        fregstr + str(i) + "\n"
+    file.write(fregstr)
+    
+    
 
 
 def modus(input):

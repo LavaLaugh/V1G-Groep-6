@@ -5,7 +5,11 @@ GPIO.setmode( GPIO.BCM )
 GPIO.setwarnings( 0 )
 
 
+
 def game1():
+    led = 18
+    GPIO.setup(led, GPIO.OUT)
+    GPIO.output(led, GPIO.HIGH)
     button1.destroy()
     button2.destroy()
     button3.destroy()
@@ -13,9 +17,13 @@ def game1():
     label2.destroy()
     naam = naam_game_1()
     label["text"] = "De eerste game is: {}".format(naam)
+    GPIO.output(led, GPIO.LOW)
 
 
 def sorting_input():
+    led = 18
+    GPIO.setup(led, GPIO.OUT)
+    GPIO.output(led, GPIO.HIGH)
     button1.destroy()
     button2.destroy()
     button3.destroy()
@@ -47,9 +55,13 @@ def sorting_input():
     button291.pack()
     button292 = Button(master=root, text="Prijs", command=lambda: sorting("price", 17, "Prijs"))
     button292.pack()
+    GPIO.output(led, GPIO.LOW)
 
 
 def sorting(input, x, y):
+    led = 18
+    GPIO.setup(led, GPIO.OUT)
+    GPIO.output(led, GPIO.HIGH)
     label21.destroy()
     button21.destroy()
     button22.destroy()
@@ -72,33 +84,21 @@ def sorting(input, x, y):
         for i in lijnen:
             text += str(i)
             index += 1
-            if index >= 25 * pagina:
+            if index >= 25:
                 return text
 
-    """for i in lijnen:
-        text += str(i)
-        index += 1
-        if index >= 25:
-            label = Label(master=root, text=text + "\nDruk op de knop voor de volgende pagina")
-            label.pack()"""
-
-
-    switch = 23
-    GPIO.setup(switch, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-    while True:
-        page_out = page(lijnen, text, index, pagina)
-        label = Label(master=root, text=page_out + "\nDruk op de knop voor de volgende pagina")
-        label.pack()
-        text = ""
-        pagina += 1
-        index += 25
-        if (GPIO.input(switch)):
-            label.destroy()
+    label = Label(master=root, text=page(lijnen, text, index, pagina) + "\nDe rest is te vinden in Sorted Output.txt")
+    label.pack()
+    GPIO.output(led, GPIO.LOW)
+            
 
 
 
 
 def stat_input():
+    led = 18
+    GPIO.setup(led, GPIO.OUT)
+    GPIO.output(led, GPIO.HIGH)
     button1.destroy()
     button2.destroy()
     button3.destroy()
@@ -111,10 +111,14 @@ def stat_input():
     button11.pack()
     button12 = Button(master=root, text="Prijs", command=lambda: stat_out("price"))
     button12.pack()
+    GPIO.output(led, GPIO.LOW)
 
 
 
 def stat_out(input):
+    led = 18
+    GPIO.setup(led, GPIO.OUT)
+    GPIO.output(led, GPIO.HIGH)
     label11.destroy()
     button11.destroy()
     button12.destroy()
@@ -137,7 +141,7 @@ def stat_out(input):
     label.pack()
     label = Label(master=root, text="De modus is: " + str(modus(input)) + "\n")
     label.pack()
-
+    GPIO.output(led, GPIO.LOW)
 
 
 
