@@ -246,6 +246,12 @@ def sorteren_basis(input, x, y):
     if input == "name":
         for game in diclist:
             file.write("Naam: " + str(game[1][1]) + "\n")
+    elif input == "owners":
+        for game in diclist:
+            owners = str(game[16][1])
+            ownerlst = list(owners.split("-"))
+            ownervalue = int(ownerlst[0]) + int(ownerlst[1]) / 2
+            file.write("Eigenaren: " + str(ownervalue) + "\n")
     else:
         for game in diclist:
             file.write("Naam: " + str(game[1][1]) + "    |   " + str(y) + ": " + str(game[x][1]) + "\n")
