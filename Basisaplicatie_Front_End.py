@@ -1,9 +1,23 @@
 from tkinter import *
 from Basisaplicatie_Back_End import *
+import sys
+import os
 import RPi.GPIO as GPIO
 GPIO.setmode( GPIO.BCM )
 GPIO.setwarnings( 0 )
 
+
+def restart():
+    python = sys.executable
+    os.execl(python, python, * sys.argv)
+    
+    
+def button_check():
+    switch = 23
+    GPIO.setup(switch, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+    while True:
+        if( GPIO.input( switch ) ):
+            restart()
 
 
 def game1():
@@ -16,8 +30,9 @@ def game1():
     label1.destroy()
     label2.destroy()
     naam = naam_game_1()
-    label["text"] = "De eerste game is: {}".format(naam)
+    label["text"] = "De eerste game is: {}".format(naam) + "\nDruk op de knop om terug te gaan"
     GPIO.output(led, GPIO.LOW)
+    root.after(100, button_check)
 
 
 def sorting_input():
@@ -86,11 +101,13 @@ def sorting(input, x, y):
             index += 1
             if index >= 25:
                 return text
-
+    GPIO.output(led, GPIO.LOW)
+    root.after(500, button_check)
     label = Label(master=root, text=page(lijnen, text, index, pagina) + "\nDe rest is te vinden in Sorted Output.txt")
     label.pack()
-    GPIO.output(led, GPIO.LOW)
-            
+    label = Label(master=root, text="Druk op de knop om terug te gaan")
+
+    
 
 
 
@@ -137,15 +154,16 @@ def stat_out(input):
     label.pack()
     label = Label(master=root, text="De standaardafwijking is: " + str(standaardafwijking(input)) + "\n")
     label.pack()
-    label = Label(master=root, text="De frequenties zijn: " + str(frequency(input, [])) + "\n")
+    label = Label(master=root, text="De frequenties zijn zijn te vinden in Sorted Output.txt\n")
     label.pack()
     label = Label(master=root, text="De modus is: " + str(modus(input)) + "\n")
     label.pack()
+    label = Label(master=root, text="Druk op de knop om terug te gaan")
     GPIO.output(led, GPIO.LOW)
+    root.after(500, button_check)
 
 
 
-b = 1
 root = Tk()
 
 root.geometry("1920x1080")

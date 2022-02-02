@@ -184,7 +184,6 @@ def frequency(input, lst):
                 lst.append(ding[17][1])
         lst.sort()
     file = open('Sorted output.txt', 'w')
-    file.write("")
 
     fregs = {}
     for i in lst:
@@ -192,10 +191,10 @@ def frequency(input, lst):
             fregs[i] += 1
         else:
             fregs[i] = 1
-    fregstr = ""
-    for i in fregs:
-        fregstr + str(i) + "\n"
+    fregstr = json.dumps(fregs, indent=4)
     file.write(fregstr)
+    file.close
+    return fregs
     
     
 
@@ -231,6 +230,8 @@ def modus(input):
                 modi.append(b[c][0])
                 c -= 1
     return sorted(modi)
+
+
 
 
 def naam_game_1():
