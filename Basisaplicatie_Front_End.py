@@ -94,8 +94,7 @@ def sorting(input, x, y):
     lijnen = file.readlines()
     text = ""
     index = 0
-    pagina = 1
-    def page(lijnen, text, index, pagina):
+    def page(lijnen, text, index):
         for i in lijnen:
             text += str(i)
             index += 1
@@ -103,9 +102,10 @@ def sorting(input, x, y):
                 return text
     GPIO.output(led, GPIO.LOW)
     root.after(500, button_check)
-    label = Label(master=root, text=page(lijnen, text, index, pagina) + "\nDe rest is te vinden in Sorted Output.txt")
+    label = Label(master=root, text=page(lijnen, text, index) + "\nDe rest is te vinden in Sorted Output.txt")
     label.pack()
-    label = Label(master=root, text="Druk op de knop om terug te gaan")
+    label = Label(master=root, text="\nDruk op de knop om terug te gaan")
+    label.pack()
 
     
 
